@@ -1,0 +1,5 @@
+g++ nasteroids-seq.cpp -o nasteroids-seq -std=c++14 -Wall -Wextra -Wno-deprecated -Werror -pedantic -pedantic-errors -O3 -DNDEBUG
+g++ nasteroids-par.cpp -o nasteroids-par -std=c++14 -Wall -Wextra -Wno-deprecated -Werror -pedantic -pedantic-errors -fopenmp -O3 -DNDEBUG
+./nasteroids-seq 100 50 50 2000
+./nasteroids-par 100 50 50 2000
+diff -y out.txt out_mio.txt
